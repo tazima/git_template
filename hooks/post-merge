@@ -1,0 +1,7 @@
+#!/bin/sh
+
+find . -path ./node_modules -prune -o -name "*.sql" -or -name "*.php" -or -name "*.js" | xargs ctags -f ./TAGS -e -L -
+
+echo 'TAGS file updated'
+echo ''
+
